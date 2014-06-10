@@ -1,0 +1,44 @@
+##
+## connection settings
+##
+
+# PostgreSQL connection
+driverClass=org.postgresql.Driver
+url=jdbc:postgresql://localhost:5432/dbName
+
+# MySQL connection
+;driverClass=com.mysql.jdbc.Driver
+;url=jdbc:mysql://localhost:3306/dbName
+
+# HSQLDB connection
+;driverClass=org.hsqldb.jdbc.JDBCDriver
+;url=jdbc:hsqldb:file:/path/to/db
+
+# ODBC connection
+;driverClass=sun.jdbc.odbc.JdbcOdbcDriver
+;url=jdbc:odbc:...
+
+;driverClass=...
+;url=...
+
+##
+## Login credentials
+##
+
+# username for login
+username=postgres
+
+# login password
+password=...
+
+
+## The next two settings specify whether you want to include the data and/or
+## schema to the output XML file.
+## If you set both of them to null the only thing you'll get is empty
+## <table name="..." /> records
+
+# whether to also extract the database's schema or now
+includeSchema=true
+
+# whether or not to extract the actual data stored in the database
+includeData=true

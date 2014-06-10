@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>zone.coding</groupId>
+	<artifactId>db2xml</artifactId>
+	<version>0.1</version>
+	<name>db2xml</name>
+	<description>Extracts schema and data from any JDBC connection and writes them to an XML file</description>
+	<dependencies>
+		<dependency>
+			<groupId>com.ociweb.java</groupId>
+			<artifactId>wax</artifactId>
+			<version>1.0.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/wax_1.0.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
+	</dependencies>
+</project>
