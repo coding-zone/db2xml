@@ -7,7 +7,7 @@ Requires Apache Maven and JDBC drivers for the database you want to connect to (
 Usage
 -----
 
-mvn exec:java -DdbDriver=path/to/jdbcDriver.jar -Dexec.args="jdbc.properties db.xml"
+    mvn exec:java -DdbDriver=path/to/jdbcDriver.jar -Dexec.args="jdbc.properties db.xml"
 
 * `dbDriver` is optional. It is only required if you want to load another JDBC driver .jar
 * The arguments defined in `exec.args` are:
