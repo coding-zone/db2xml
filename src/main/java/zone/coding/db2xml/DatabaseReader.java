@@ -11,6 +11,7 @@ public class DatabaseReader {
 		for (String tableName: JdbcHelper.listTables(db)) {
 			_writeTable(db, writer, tableName, props);
 		}
+		System.out.println("done...");
 	}
 
 	public static void read(Connection db, XmlWriter writer) throws SQLException {

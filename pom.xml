@@ -6,6 +6,10 @@
 	<version>0.1</version>
 	<name>db2xml</name>
 	<description>Extracts schema and data from any JDBC connection and writes them to an XML file</description>
+
+	<properties>
+		<dbDriver>path/to/driver.jar</dbDriver>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.ociweb.java</groupId>
@@ -50,6 +54,7 @@
 					<mainClass>zone.coding.db2xml.Main</mainClass>
 					<additionalClasspathElements>
 						<additionalClasspathElement>${basedir}/lib/wax_1.0.5.jar</additionalClasspathElement>
+						<additionalClasspathElement>${dbDriver}</additionalClasspathElement>
 					</additionalClasspathElements>
 				</configuration>
 			</plugin>
