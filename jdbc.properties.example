@@ -42,3 +42,7 @@ includeSchema=true
 
 # whether or not to extract the actual data stored in the database
 includeData=true
+
+
+# comma separated list of tables to exclude from the output
+exclude=table1,table2
