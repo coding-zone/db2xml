@@ -1,6 +1,5 @@
 package zone.coding.db2xml;
 
-import java.io.Closeable;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.sql.ResultSet;
@@ -17,7 +16,7 @@ import com.ociweb.xml.Version;
 import com.ociweb.xml.WAX;
 
 
-public class XmlWriter implements Closeable {
+public class XmlWriter implements Writer {
 	private WAX m_wax;
 
 	public XmlWriter(OutputStream os, String rootName) {
@@ -28,7 +27,7 @@ public class XmlWriter implements Closeable {
 	public void close() throws IOException {
 		m_wax.close();
 	}
-	
+
 	public void startTable(String tableName) {
 		m_wax.start("table").attr("name", tableName);
 	}
@@ -85,14 +84,6 @@ public class XmlWriter implements Closeable {
 		finally {
 			m_wax.end();
 		}
-	}
-
-	private static String _escapeValue(String value) {
-		String rc = null;
-		if (value != null) {
-			rc = value.replace("&", "&amp;").replace("\"", "&quot;").replace("<", "&lt;").replace(">", "&gt;").replace("'", "&apos;");
-		}
-		return rc;
 	}
 
 	private static boolean _isBinary(int sqlType) {

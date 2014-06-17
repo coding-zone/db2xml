@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class DatabaseReader {
-	public static void read(Connection db, XmlWriter writer, Properties props) throws SQLException {
+	public static void read(Connection db, Writer writer, Properties props) throws SQLException {
 		Set<String> excludedTables = _getExcludedList(props);
 		System.out.println("Extracting tables:");
 		for (String tableName: JdbcHelper.listTables(db)) {
@@ -38,7 +38,7 @@ public class DatabaseReader {
 		return rc;
 	}
 
-	private static void _writeTable(Connection db, XmlWriter writer, String tableName, Properties props) throws SQLException {
+	private static void _writeTable(Connection db, Writer writer, String tableName, Properties props) throws SQLException {
 		System.out.println("\t'"+tableName+"'");
 		boolean includeSchema = new Boolean(props.getProperty("includeSchema", "true"));
 		boolean includeData = new Boolean(props.getProperty("includeData", "true"));
